@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1" />
+	
+	<title>QuoteForm</title>
+
+	<!-- set your website meta description and keywords -->
+	<meta name="description" content="Add your website description here">
+	<meta name="keywords" content="Add your website keywords here">
+	
+	<!-- set your website favicon icon -->
+	<link href="favicon.ico" rel="icon">
+	
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/quoteform.css" type="text/css">
+
+</head>
+
+<body>
+
+	<div class="QuoteForm-section wrapper">
+		<div class="display-table">
+			<div class="display-table-cell">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="form-wrap clearfix">
+								
+								<div class="col-sm-12">
+									<form id="QuoteForm" name="QuoteForm" data-toggle="validator" class="QuoteForm"  enctype="multipart/form-data">
+										<div class="section-wrap">
+
+											<div id="section-1" class="section">
+												<fieldset>
+													<h3 class="section-title">Step 1 of 5</h3>
+
+													<div class="progress">
+														<div class="progress-bar" style="width: 0%;">
+															<div class="progress-bar-text">0% Complete</div>
+														</div>
+													</div>
+
+
+													<div class="help-block with-errors mandatory-error"></div>
+													<h4>Click "Yes" When You're Ready To Begin. *</h4>
+													<div class="form-group validopsys">
+														<ul class="mgs-radio list-unstyled">
+															<li>
+                                                                <input type="checkbox" name="opsys" id="opsys1" value="Yes" />
+																<label for="opsys1">Yes</label>
+															</li>
+															<li>
+                                                                <input type="radio" name="opsys" id="opsys2" value="Apple" />
+																<label for="opsys2"><img src="assets/img/logo-apple.jpg" /></label>
+															</li>
+															<li>
+                                                                <input type="radio" name="opsys" id="opsys3" value="Windows" />
+																<label for="opsys3"><img src="assets/img/logo-windows.jpg" /></label>
+															</li>
+														</ul>
+														<div class="help-block with-errors"></div>
+													</div>
+													<div class="form-group quoteForm-step-1">
+														<button class="btn btn-custom pull-right" onclick="nextStep2()" type="button">Next <span class="fa fa-arrow-right"></span></button> 
+													</div>
+												</fieldset>
+											</div><!-- end section -->
+
+											<div id="section-2" class="section slide-right">
+												<div>
+													<h3 class="section-title">Step 2 of 5</h3>													
+													<div class="progress">
+														<div class="progress-bar" style="width: 25%;">
+															<div class="progress-bar-text">25% Complete</div>
+														</div>
+													</div>
+													<h4>Select Service:</h4>
+													<div class="help-block with-errors mandatory-error"></div>
+													<div class="form-group validreqsevice">
+															<ul class="mgs-radio list-unstyled">
+																	<li>
+																		<input type="radio" name="opsys" id="opsys1" value="Yes" />
+																		<label for="opsys1">Yes</label>
+																	</li>
+																	<!-- <li>
+																		<input type="radio" name="opsys" id="opsys2" value="Apple" />
+																		<label for="opsys2"><img src="assets/img/logo-apple.jpg" /></label>
+																	</li>
+																	<li>
+																		<input type="radio" name="opsys" id="opsys3" value="Windows" />
+																		<label for="opsys3"><img src="assets/img/logo-windows.jpg" /></label>
+																	</li> -->
+																</ul>
+														<div class="input-group-icon"><i class="fa fa-bars"></i></div>
+														<div class="help-block with-errors"></div>
+													</div>	
+													<div class="form-group validpriority">
+														<h4>Project Priority*:</h4>
+														<label class="radio-inline"><input type="radio" name="priority" name="chooseoption" id="priority1" value="Low">Low</label>
+														<label class="radio-inline"><input type="radio" name="priority" name="chooseoption" id="priority2" value="Medium">Medium</label> 
+														<label class="radio-inline"><input type="radio" name="priority" name="chooseoption" id="priority3" value="Argent">Argent</label> 
+														<div class="help-block with-errors"></div>
+													</div>
+													<div class="form-group quoteForm-step-2">
+														<button class="btn btn-custom" type="button" onclick="previousStep1()"><span class="fa fa-arrow-left"></span> Back</button> 
+														<button class="btn btn-custom pull-right" type="button" onclick="nextStep3()">Next <span class="fa fa-arrow-right"></span></button> 
+													</div>
+												</div>
+											</div><!-- end section -->
+
+											<div id="section-3" class="section slide-right">
+												<fieldset>
+													<h3 class="section-title">Step 3 of 5</h3>									
+													<div class="progress">
+														<div class="progress-bar" style="width: 50%;">
+															<div class="progress-bar-text">50% Complete</div>
+														</div>
+													</div>
+													<h4>Provide Your Identity:</h4>
+													<div class="help-block with-errors mandatory-error"></div>
+													<div class="form-group validfname">
+														<input class="form-control" name="fname" id="fname" type="text" placeholder="First Name*" required data-error="Please enter First Name">
+														<div class="input-group-icon"><i class="fa fa-user"></i></div>
+														<div class="help-block with-errors"></div>
+													</div>
+													<div class="form-group validlname">
+														<input class="form-control" name="lname" id="lname" type="text" placeholder="Last Name*" required data-error="Please enter Last Name">
+														<div class="input-group-icon"><i class="fa fa-user"></i></div>
+														<div class="help-block with-errors"></div>
+													</div>
+													<div class="form-group validgender">
+														<select class="form-control" name="gender" id="gender" title="" placeholder="Gender" required data-error="Please Select Gender">
+															<option value="">--- Select Your Gender* ---</option>
+															<option value="Male">Male</option>
+															<option value="Femal">Female</option>
+														</select>
+														<div class="input-group-icon"><i class="fa fa-mars"></i></div>
+														<div class="help-block with-errors"></div>
+													</div>
+													<div class="form-group validaddress">
+														<input class="form-control" name="address" id="address" type="text" placeholder="Address*" required data-error="Please enter address">
+														<div class="input-group-icon"><i class="fa fa-address-card"></i></div>
+														<div class="help-block with-errors"></div>
+													</div>
+													<div class="form-group validemail">
+														<input class="form-control" name="email" id="email" type="email" placeholder="Email*" required data-error="Please enter valid email">
+														<div class="input-group-icon"><i class="fa fa-envelope"></i></div>
+														<div class="help-block with-errors"></div>
+													</div>
+													<div class="form-group validphone">
+														<input class="form-control" name="phone" id="phone" type="text" placeholder="Phone*" required data-error="Please enter valid phone">
+														<div class="input-group-icon"><i class="fa fa-phone"></i></div>
+														<div class="help-block with-errors"></div>
+													</div>
+													<div class="form-group quoteForm-step-3">
+														<button class="btn btn-custom" type="button" onclick="previousStep2()"><span class="fa fa-arrow-left"></span> Back</button> 
+														<button id="nextStepFour" class="btn btn-custom pull-right" type="button" onclick="nextStep4()">Next <span class="fa fa-arrow-right"></span></button>
+													</div>
+												</fieldset>
+											</div><!-- end section -->
+											
+											<div id="section-4" class="section slide-right">
+												<fieldset>
+													<h3 class="section-title">Step 4 of 5</h3>								
+													<div class="progress">
+														<div class="progress-bar" style="width: 75%;">
+															<div class="progress-bar-text">75% Complete</div>
+														</div>
+													</div>
+													<h4>Provide additional Requirements Details:</h4>
+													<div class="help-block with-errors mandatory-error"></div>
+													<div class="form-group">
+														<textarea rows="3" name="additionalinfo" id="additionalinfo" placeholder="Additional Info(optional)" class="form-control"></textarea>
+														<div class="input-group-icon"><i class="fa fa-info-circle"></i></div>
+													</div>											
+													<div class="form-group validagree">
+														<div class="checkbox">
+															<label><input name="aggre" id="aggre" value="1" type="checkbox">Aggre with terms &amp; conditions</label>
+														</div>
+														<div class="help-block with-errors"></div>
+													</div>
+													<div class="form-group quoteForm-step-4">
+														<button class="btn btn-custom" type="button" onclick="previousStep3()"><span class="fa fa-arrow-left"></span> Back</button> 
+														<button class="btn btn-custom pull-right" type="button" onclick="nextStep5()">Next <span class="fa fa-arrow-right"></span></button>
+													</div>
+												</fieldset>
+											</div><!-- end section -->
+											
+											<div id="section-5" class="section review-submit-section slide-right">
+												<fieldset>
+													<h3 class="section-title">Step 5 of 5: Review &amp; Submit</h3>
+													<div class="progress">
+														<div class="progress-bar" style="width: 100%;">
+															<div class="progress-bar-text">100% Complete</div>
+														</div>
+													</div>
+													
+													<h4>Your Inputed Data Summery:</h4>
+													<div class="row">
+														<div class="column col-md-6 col-sm-12">
+															<h5>Section One</h5>
+															<div class="section-info-box">
+																<p id="osData"></p>
+															</div>	
+															
+															<h5>Section Two</h5>
+															<div class="section-info-box">
+																<p id="serviceData"></p>
+																<p id="priorityData"></p>
+															</div>
+														</div>
+														<div class="column col-md-6 col-sm-12">
+															<h5>Section Three</h5>
+															<div class="section-info-box">
+																<p id="firstNameData"></p>
+																<p id="lastNameData"></p>
+																<p id="genderData"></p>
+																<p id="addressData"></p>												
+																<p id="emailaddressData"></p>												
+																<p id="phoneData"></p>
+															</div>
+															
+															<h5>Section Four</h5>
+															<div class="section-info-box">
+																<p id="additionalinfoData"></p>
+															</div>
+														</div>
+														<div class="col-sm-12">
+															<div><strong>Would you like to provide requirements details as Attachment?</strong></div>
+															<div class="form-group attachmentFile">
+																<label class="input-group-btn">
+																	<span class="btn">
+																		Browse&hellip; <input name="userfile" id="userfile" type="file">
+																	</span>
+																</label>
+																<input type="text" id="attachedFile" class="form-control" placeholder="Browse to select file" readonly>
+															</div><!-- end form-group -->
+														</div><!-- end col-sm-12 -->
+														<div class="form-group col-sm-12">
+															<div id="humanCheckCaptchaBox"></div><div id="firstDigit"></div> + <div id="secondDigit"></div> = <input name="humanCheckCaptchaInput" id="humanCheckCaptchaInput" placeholder="" maxlength="3" class="form-control" type="text" required data-error="Please solve Captcha">
+															<div class="help-block with-errors"></div>
+														</div><!-- end form-group -->
+														<div class="col-sm-12">
+															<p id="AggreData"><strong>Aggre with terms &amp; conditions:</strong> <input name="aggre" id="aggre" value="1" checked disabled type="checkbox"></p>
+															<div id="mgsContactSubmit" class="hidden"></div>
+														
+															<div id="final-step-buttons" class="form-group  quoteForm-step-5">
+																<button class="btn btn-custom" type="button" onclick="previousStep4()"><span class="fa fa-arrow-left"></span> Back</button> 
+																<button id="Submit" class="btn btn-custom pull-right" type="submit">Submit </button>
+															</div>										
+														</div>									
+													</div>
+												</fieldset>
+                                            </div><!-- end section -->
+                                            
+										</div><!-- end section-wrap -->
+									</form>
+                                </div><!-- end col-md-6 -->
+                                
+							</div><!-- end form-wrap -->
+						</div><!-- end col-sm-12 -->
+					</div><!-- end row -->
+					
+				</div><!-- end container -->
+			</div><!-- end display-table-cell -->
+		</div><!-- end display-table -->
+	</div>
+	
+	<!-- Scripts -->
+	<script src="assets/js/jquery-3.4.1.min.js"></script>
+	<script src="assets/js/validator.min.js"></script>
+    <script src="assets/js/quoteform.js"></script>
+	
+</body>
+</html>
